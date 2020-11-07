@@ -165,10 +165,9 @@ function dragElement(elmnt) {
     jsPlumb.bind("ready", function() {
       
       var common = {
-        anchors:[ "BottomCenter", "TopCenter" ],
         endpoints:["Rectangle", "Blank" ],
-        anchors:["Bottom","Top"],
-        detachable:false
+        detachable:false,
+        anchor:"AutoDefault"
       };
       
       jsPlumb.connect({source:"c1", target:"c2"}, common);
